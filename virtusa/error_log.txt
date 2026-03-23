@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "C:\Users\KIRAN_MANE\OneDrive\Desktop\virtusa\main.py", line 28, in <module>
+    result = app.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 3290, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2724, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 71, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\OneDrive\Desktop\virtusa\agents\observer_agent.py", line 38, in observer_agent
+    response = llm.invoke(prompt)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 402, in invoke
+    self.generate_prompt(
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1123, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 933, in generate
+    self._generate_with_cache(
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1235, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langchain_openai\chat_models\base.py", line 1492, in _generate
+    _handle_openai_api_error(e)
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\langchain_openai\chat_models\base.py", line 1487, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\openai\_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\openai\resources\chat\completions\completions.py", line 1211, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIRAN_MANE\AppData\Roaming\Python\Python312\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 16384 tokens, but can only afford 4000. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_3AnvNagj6GolQfnevEJ0HIgjgAR'}
+During task with name 'observer' and id '7347a177-2f1e-43ad-d6e9-386288c1b579'

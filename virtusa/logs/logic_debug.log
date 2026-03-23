@@ -1,0 +1,4 @@
+[2026-03-23T08:12:03.584124] Logic Agent Error: Error code: 404 - {'error': {'message': 'No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy', 'code': 404}}
+[2026-03-23T08:18:41.688496] Logic Agent Error: Error code: 404 - {'error': {'message': 'No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy', 'code': 404}}
+[2026-03-23T08:24:50.551581+00:00] Logic Agent Error: Error code: 404 - {'error': {'message': 'No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy', 'code': 404}}
+[2026-03-23T09:24:13.213675+00:00] Logic Agent Error: Error code: 404 - {'error': {'message': 'No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy', 'code': 404}}
